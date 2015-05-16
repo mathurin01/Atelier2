@@ -22,6 +22,21 @@ Route::get('{n}', function($n)
     return 'Je suis la page ' . $n . ' !'; }
 )->where('n', '[1-3]');;
 
+Route::get('vue1', function()
+{
+    return view('vue1');
+});
+
+get('article/{n}', function($n)
+{
+    return view('article')->with('numero', $n);
+})->where('n', '[0-9]+');
+
+Route::get('facture/{n}', function($n)
+{
+    return view('facture')->withNumero($n);
+})->where('id', '[0-9]+');
+
 Route::get('home', 'HomeController@index');
 
 Route::controllers([
