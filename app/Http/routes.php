@@ -20,12 +20,15 @@ Route::get('/', function()
 Route::get('{n}', function($n)
 {
     return 'Je suis la page ' . $n . ' !'; }
-)->where('n', '[1-3]');;
+)->where('n', '[1-3]');
 
 Route::get('vue1', function()
 {
     return view('vue1');
 });
+
+/*** route des joueurs **/
+Route::get('player/{n}', 'PlayerController@show')->where('n', '[0-9]+');
 
 get('article/{n}', function($n)
 {
