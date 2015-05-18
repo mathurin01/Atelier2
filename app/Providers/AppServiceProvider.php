@@ -27,7 +27,9 @@ class AppServiceProvider extends ServiceProvider {
 	{
 		$this->app->bind(
 			'Illuminate\Contracts\Auth\Registrar',
-			'App\Services\Registrar'
+			'App\Services\Registrar',
+            'App\Gestion\PhotoGestionInterface',
+            'App\Gestion\PhotoGestion'
 		);
 	}
 
