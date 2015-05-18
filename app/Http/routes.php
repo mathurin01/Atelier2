@@ -11,6 +11,11 @@
 |
 */
 
+//Route::get('users', 'UsersController@getInfos');
+//Route::post('users', 'UsersController@postInfos');
+
+Route::controller('users', 'UsersController');
+
 //Route::get('/', 'WelcomeController@index');
 Route::get('/', function()
 {
