@@ -18,6 +18,7 @@ Route::controller('users', 'UsersController');
 
 Route::controller('contact', 'ContactController');
 
+Route::controller('photo', 'PhotoController');
 
 //Route::get('/', 'WelcomeController@index');
 Route::get('/', function()
