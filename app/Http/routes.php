@@ -16,6 +16,9 @@
 
 Route::controller('users', 'UsersController');
 
+Route::controller('contact', 'ContactController');
+
+
 //Route::get('/', 'WelcomeController@index');
 Route::get('/', function()
 {
